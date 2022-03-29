@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import HomePage from "./pages/HomePage";
+import { Route, BrowserRouter, Routes } from "react-router-dom";
+import RegistePage from "./pages/RegistePage";
+import ProductInfo from "./pages/ProductInfo";
+import CartPage from "./pages/CartPage";
+import LoginPage from "./pages/LoginPage";
+import { ToastContainer } from "react-toastify";
+import OrdersPage from "./pages/OrdersPage";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ToastContainer />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/productinfo/:productid" element={<ProductInfo />} />
+          <Route path="/cart" element={<CartPage />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/register" element={<RegistePage />} />
+          <Route path="/orders" element={<OrdersPage />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
 
 export default App;
+
+// export const ProdectedRoutes = ({ children }) => {
+//   if (localStorage.getItem("currentUser")) {
+//     return children;
+//   } else {
+//     return <Navigate to="/register" />;
+//   }
+// };
