@@ -60,6 +60,7 @@ const CartPage = () => {
       setLoading(false);
       toast.success("Order placed successfully");
       handleClose();
+      console.log(result);
     } catch (error) {
       toast.error("Order failed");
       setLoading(false);
@@ -226,12 +227,13 @@ const Info = styled.div`
 const Product = styled.div`
   display: flex;
   justify-content: space-between;
-  margin: 20px;
+  margin: 10px;
   border: solid 1px gray;
+  border-radius: 30px;
 `;
 
 const Image = styled.img`
-  width: 300px;
+  width: 240px;
   height: 200px;
   padding: 10px;
 `;

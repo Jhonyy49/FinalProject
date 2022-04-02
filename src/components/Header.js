@@ -36,10 +36,10 @@ const Header = () => {
             <Nav.Link>
               <Link
                 className="nav-link"
-                to="/"
+                to="/register"
                 style={{ textDecoration: "none", color: "white" }}
               >
-                About Us
+                Register
               </Link>
             </Nav.Link>
             <Nav.Link>
@@ -48,9 +48,10 @@ const Header = () => {
                 to="/"
                 style={{ textDecoration: "none", color: "white" }}
               >
-                Logout
+                About Us
               </Link>
             </Nav.Link>
+
             <Nav.Link>
               <Link
                 className="nav-link"

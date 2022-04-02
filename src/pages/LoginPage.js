@@ -4,6 +4,7 @@ import Layout from "../components/Layout";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { toast } from "react-toastify";
 import Loader from "../components/Loader";
+import styled from "styled-components";
 
 const LoginPage = () => {
   const [email, setEmail] = useState("");
@@ -31,54 +32,68 @@ const LoginPage = () => {
         <div
           className="Login-top"
           style={{
-            height: "50%",
+            height: "100%",
             position: "absolute",
             left: "0",
             right: "0",
             top: "0",
-            backgroundColor: "#003f5c",
+            backgroundColor: "#B4ECE3",
             zIndex: "0",
           }}
         ></div>
         <div className="row">
-          <div className="col-md-4" style={{ zIndex: "1", color: "white" }}>
-            <div className="login-form">
+          <div className="col-md-6" style={{ zIndex: "1", color: "white" }}>
+            <div
+              className="login-form"
+              style={{ paddingLeft: "200px", paddingTop: " 200px" }}
+            >
               <h2>Login</h2>
-              <hr />
+
               <input
                 type="text"
                 className="form-control"
                 placeholder="email"
                 value={email}
+ 
                 onChange={(e) => {
                   setEmail(e.target.value);
                 }}
               />
+              <br />
               <input
-                type="text"
+                type="password"
                 className="form-control"
                 placeholder="password"
                 value={password}
+             
                 onChange={(e) => {
                   setPassword(e.target.value);
                 }}
               />
-              <button onClick={login}>Login</button>
-              <hr />
-              <Link
-                to="/register"
-                style={{ textDecoration: "none", color: "white" }}
-              >
-                Click her to Register
-              </Link>
+              <br />
+              <LoginWrapper>
+                <Button onClick={login}>Login</Button>
+
+                <Link
+                  to="/register"
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  Click her to Register
+                </Link>
+              </LoginWrapper>
             </div>
           </div>
           <div className="col-md-5">
             <lottie-player
-              src="https://assets4.lottiefiles.com/packages/lf20_5tkzkblw.json"
+              src="https://assets8.lottiefiles.com/packages/lf20_gjmecwii.json"
               background="transparent"
               speed="1"
-              // style={{ width: "300px", height: "300px" }}
+              style={{
+                width: "400px",
+                height: "400px",
+                paddingLeft: "100px",
+                paddingTop: "100px",
+              }}
               loop
               autoplay
             ></lottie-player>
@@ -88,5 +103,17 @@ const LoginPage = () => {
     </Layout>
   );
 };
+
+const LoginWrapper = styled.div`
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+`;
+
+const Button = styled.button`
+  border: none;
+  border-radius: 30px;
+`;
 
 export default LoginPage;

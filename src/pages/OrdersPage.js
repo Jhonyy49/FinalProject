@@ -31,17 +31,17 @@ function OrdersPage() {
   return (
     <Layout loading={loading}>
       {orders.map((order) => (
-        <table className="table mt-2 order">
+        <table className="table mt-2 order -3">
           <thead>
             <tr>
-              <th>Image</th>
-              <th>Name</th>
-              <th>Price</th>
+              <th>Product Image</th>
+              <th>Product Name</th>
+              <th>Product Price</th>
             </tr>
           </thead>
           <tbody>
             {order.cartItems.map((item) => (
-              <tr>
+              <tr >
                 <td>
                   <img
                     src={item.image}
@@ -51,7 +51,7 @@ function OrdersPage() {
                   />
                 </td>
                 <td>{item.name}</td>
-                <td>{item.price}</td>
+                <td>{item.price} Dt</td>
               </tr>
             ))}
           </tbody>

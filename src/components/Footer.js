@@ -32,7 +32,7 @@ const Footer = () => {
             <Link to="/orders">Your Orders</Link>
           </ListItem>
           <ListItem>
-            <Link to="/cart">Your Cart</Link>
+            <Link to="/cart">Your Basket</Link>
           </ListItem>
         </List>
       </Center>

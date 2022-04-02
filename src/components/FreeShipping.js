@@ -6,7 +6,7 @@ const FreeShipping = () => {
     <Wrapper>
       <Item>
         <h3>Free Shipping </h3>
-        <Paragraph>Free shipping on all Local Area order above $200</Paragraph>
+        <Paragraph>Free shipping on all Local Area order above 200</Paragraph>
       </Item>
       <Item>
         <h3>30 Days Return </h3>

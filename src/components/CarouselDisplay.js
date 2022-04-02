@@ -20,8 +20,7 @@ const CarouselDisplay = () => {
             style={{ height: "950px" }}
           />
           <Carousel.Caption style={{ color: "black", paddingTop: "30px" }}>
-            <Title>Iphone</Title>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            <Title>iPhones</Title>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -34,7 +33,6 @@ const CarouselDisplay = () => {
 
           <Carousel.Caption style={{ color: "black", paddingTop: "30px" }}>
             <Title>MacBooks</Title>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -47,9 +45,6 @@ const CarouselDisplay = () => {
 
           <Carousel.Caption style={{ color: "black", paddingTop: "30px" }}>
             <Title>Laptops</Title>
-            <p>
-              Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-            </p>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
@@ -57,7 +52,7 @@ const CarouselDisplay = () => {
   );
 };
 
-const Title = styled.h3`
+const Title = styled.h2`
   padding-top: 30px;
 `;
 
